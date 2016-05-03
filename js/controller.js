@@ -134,14 +134,11 @@
                 if (isConfirm) {
                     swal("Taxi solicitado com sucesso!", "Aguarde alguns minutos, o taxi chegará em poucos minutos Número: 1..", "success");
                    // $("#menuTaxi").addClass('btDesativado');
-                   
-                    $scope.$apply(function() {
                     
                      $("#menuTaxi").attr('data-ng-click', '$scope.cancelarTaxi()');
                      $("#menuTaxi").attr('src', 'images/cancelarTaxi.png');
-                     $scope.$digest()
+                    $scope.$apply();
                     
-                    });
                 } else {
                     swal("Cancelado!", "Sua solicitação foi cancelada com sucesso!", "error");
                 }
@@ -168,7 +165,7 @@
                    // $("#menuTaxi").addClass('btDesativado');
                     $("#menuTaxi").attr('data-ng-click', 'chamarTaxi()');
                     $("#menuTaxi").attr('src', 'images/menu3.png');
-                    $scope.$digest();
+                    
                 } else {
                     swal("Cancelado!", "Operação cancelada!", "error");
                 }
