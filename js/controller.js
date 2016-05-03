@@ -110,62 +110,62 @@
            swal("Mensagem enviada com sucesso!", "", "success");
         }
 
+        $scope.taxiChamado = false;
+        $scope.taxi = function taxi(){
+            
+            if($scope.taxiChamado) {
+                
+                 swal({
+                    title: "Deseja cancelar o taxi?",
+                    text: "",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "Sim, cancelar taxi!",
+                    cancelButtonText: "Não!",
+                    closeOnConfirm: false,
+                    closeOnCancel: false,
+                    imageUrl: "images/icTaxi.jpg"
+                }, function(isConfirm) {
+                    if (isConfirm) {
+                        swal("Taxi cancelado com sucesso!", "", "success");
+                        $("#menuTaxi").attr('src', 'images/menu3.png');
+                        $scope.taxiChamado = false;
 
+                    } else {
+                        swal("Cancelado!", "Operação cancelada!", "error");
+                    }
+                });
+            
+            
+            }else {
+            
+                
+                swal({
+                    title: "Deseja solicitar um taxi?",
+                    text: "O taxi chega em poucos minutos e te leva com todo conforto!",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "Sim, desejo chamar!",
+                    cancelButtonText: "Não, desejo cancelar!",
+                    closeOnConfirm: false,
+                    closeOnCancel: false,
+                    imageUrl: "images/icTaxi.jpg"
+                }, function(isConfirm) {
+                    if (isConfirm) {
+                        swal("Taxi solicitado com sucesso!", "Aguarde alguns minutos, o taxi chegará em poucos minutos Número: 1..", "success");
+                         $("#menuTaxi").attr('src', 'images/cancelarTaxi.png');
+                        $scope.taxiChamado = true;
 
-        $scope.chamarTaxi = function chamarTaxi() {
-
-            swal({
-                title: "Deseja solicitar um taxi?",
-                text: "O taxi chega em poucos minutos e te leva com todo conforto!",
-                showCancelButton: true,
-                confirmButtonColor: "#DD6B55",
-                confirmButtonText: "Sim, desejo chamar!",
-                cancelButtonText: "Não, desejo cancelar!",
-                closeOnConfirm: false,
-                closeOnCancel: false,
-                imageUrl: "images/icTaxi.jpg"
-            }, function(isConfirm) {
-                if (isConfirm) {
-                    swal("Taxi solicitado com sucesso!", "Aguarde alguns minutos, o taxi chegará em poucos minutos Número: 1..", "success");
-                   // $("#menuTaxi").addClass('btDesativado');
-                    
-                     $("#menuTaxi").attr('data-ng-click', '$scope.cancelarTaxi()');
-                     $("#menuTaxi").attr('src', 'images/cancelarTaxi.png');
-                    $scope.$apply();
-                    
-                } else {
-                    swal("Cancelado!", "Sua solicitação foi cancelada com sucesso!", "error");
-                }
-            });
-
-        }
-
-
-        $scope.cancelarTaxi = function cancelarTaxi() {
-
-           swal({
-                title: "Deseja cancelar o taxi?",
-                text: "",
-                showCancelButton: true,
-                confirmButtonColor: "#DD6B55",
-                confirmButtonText: "Sim, cancelar taxi!",
-                cancelButtonText: "Não!",
-                closeOnConfirm: false,
-                closeOnCancel: false,
-                imageUrl: "images/icTaxi.jpg"
-            }, function(isConfirm) {
-                if (isConfirm) {
-                    swal("Taxi cancelado com sucesso!", "", "success");
-                   // $("#menuTaxi").addClass('btDesativado');
-                    $("#menuTaxi").attr('data-ng-click', 'chamarTaxi()');
-                    $("#menuTaxi").attr('src', 'images/menu3.png');
-                    
-                } else {
-                    swal("Cancelado!", "Operação cancelada!", "error");
-                }
-            });
-
-        }
+                    } else {
+                        swal("Cancelado!", "Sua solicitação foi cancelada com sucesso!", "error");
+                    }
+                });
+            
+            
+            }
+        
+        
+        }       
 
 
         $scope.pagar = function pagar() {
