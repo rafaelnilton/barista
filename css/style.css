@@ -1,0 +1,615 @@
+@charset "utf-8";
+/* Folha de Estilo referente ao Site da UNIVERSALCS */
+
+
+body
+{
+    margin: 0 auto;
+    font-size: 100%;
+    font-family:Myriad Pro;
+}
+
+body a
+{
+    text-decoration: none;
+}
+
+.centro
+{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 980px;
+    display: block;
+}
+
+.centroMenu
+{
+    margin: 0 auto;
+    width: 572px;
+    display: block;
+}
+
+/*----------------------------------- FONTS ------------------------------------*/
+
+@font-face
+{
+    font-family:"S";
+    src:url("fonts/S.ttf") format("truetype"),
+    url("fonts/S.eot") format("truetype"),
+    url("fonts/S.otf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+
+@font-face
+{
+    font-family:"SP";
+    src:url("fonts/SP.ttf") format("truetype"),
+    url("fonts/SP.eot") format("truetype"),
+    url("fonts/SP.otf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face
+{
+    font-family:"UBUNTU-BOLD";
+    src:url("fonts/UBUNTU-BOLD.ttf") format("truetype"),
+    url("fonts/UBUNTU-BOLD.eot") format("truetype"),
+    url("fonts/UBUNTU-BOLD.otf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face
+{
+    font-family:"UBUNTU-ITALIC";
+    src:url("fonts/UBUNTU-ITALIC.ttf") format("truetype"),
+    url("fonts/UBUNTU-ITALIC.eot") format("truetype"),
+    url("fonts/UBUNTU-ITALIC.otf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face
+{
+    font-family:"UBUNTU-LIGHTITALIC";
+    src:url("fonts/UBUNTU-LIGHTITALIC.ttf") format("truetype"),
+    url("fonts/UBUNTU-LIGHTITALIC.eot") format("truetype"),
+    url("fonts/UBUNTU-LIGHTITALIC.otf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face
+{
+    font-family:"UBUNTU-LIGHT";
+    src:url("fonts/UBUNTU-LIGHT.ttf") format("truetype"),
+    url("fonts/UBUNTU-LIGHT.eot") format("truetype"),
+    url("fonts/UBUNTU-LIGHT.otf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face
+{
+    font-family:"UBUNTU-REGULAR";
+    src:url("fonts/UBUNTU-REGULAR.ttf") format("truetype"),
+    url("fonts/UBUNTU-REGULAR.eot") format("truetype"),
+    url("fonts/UBUNTU-REGULAR.otf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+
+::-webkit-input-placeholder {
+   color: #333;
+}
+
+:-moz-placeholder {
+   color: #333;
+}
+
+::-moz-placeholder {
+   color: #333;  
+}
+
+:-ms-input-placeholder {  
+   color: #333;  
+}
+
+
+h1 {
+    float: left;
+    width: 98%;
+    font: 20px "UBUNTU-BOLD";
+    color: #00B2B2;
+    margin-top: 20px;
+    padding-left: 2%;
+}
+
+
+h2 {
+    float: left;
+    width: 99%;
+    font: 15px "UBUNTU-BOLD";
+    color: #00B2B2;
+    margin-top: 20px;
+    margin-left: 1%;
+}
+s
+/*---------------------------Classes padrões----------------------------*/
+
+.centro-planos{
+    margin: 0 auto;
+    display: block;
+}
+
+
+/*----------------------------------Topo--------------------------------------*/
+
+header{
+    float: left;
+    width: 100%;
+    height: 114px;
+    position: fixed;
+    display: block;
+    z-index: 999;
+    background: #333;
+}
+
+        header #logo{
+            float: left;
+            width: 201px;
+            height: 43px;
+            background: url("../images/logo.png") no-repeat;
+            margin-top: 35px;
+            margin-left: 2%;
+            animation: animationLogo 1s;
+            -webkit-animation: animationLogo 1s;
+            -moz-animation: animationLogo 1s;
+        }
+     
+        
+        header nav{
+            float: right;
+            min-width: 650px;
+            height: 54px;
+            z-index: 1;
+            display: block;
+            margin-top: 15px;
+            animation: animationMenu 1s;
+            -webkit-animation: animationMenu 1s;
+            -moz-animation: animationMenu 1s;
+        }
+                    header nav ul li{
+                        float: left;
+                        width: auto;
+                        height: 39px;
+                        color: black;
+                        text-align: center;
+                        margin-left: 1%;
+                        margin-right: 1%;
+                        font: 25px "UBUNTU-REGULAR";
+                        padding-top: 10px;
+                        padding-left: 1%;
+                        padding-right: 1%;
+                        cursor: pointer;
+                        display: inline-block;
+                        color: #111111;
+                    }
+                    header nav ul li.active{
+                        background: #17A7D1;
+                        color: white;
+                    }
+                    header nav ul li.active:hover{
+                        color: #111111 !important;
+                    }
+                    header nav ul li:hover{
+                        margin-top: -10px;
+                        opacity:0.7;
+                        transition: all 0.4s;
+                        -webkit-transition: all 0.4s;
+                        -moz-transition: all 0.4s;
+                    }
+
+
+#promocoes {
+    float: left;
+    width: 100%;
+    margin-top: 114px;
+}
+
+
+#slideLeft
+{
+    float: left;
+    width: 40%;
+}
+
+.cycle-slideshow{
+    float: left;
+    width: 100%;
+}
+    .cycle-slideshow img{
+        float: left;
+        width: 100%;
+        cursor: pointer;
+    }
+        
+        .arrow{
+            position: absolute;
+            width: 33px;
+            height: 101px;
+            z-index: 102;
+            margin-top: 30%;
+            display: block;
+        }
+        #prev-slide{
+            float: left;
+            width: 32px;
+            height: 101px;
+            background: url("../imgs/arrows.png") no-repeat;
+            background-position: 1px 0;
+            margin-left: 1%;
+        }
+        #next-slide{
+            float: right;
+            width: 32px;
+            height: 101px;
+            background: url("../imgs/arrows.png") no-repeat;
+            background-position: -46px 0;
+            right: 1%;
+        }
+
+#controlSlide{
+    float: left;
+    width: 100%;
+}
+    #controlSlide img{
+        float: left;
+        cursor: pointer;
+        margin:2%;
+    }
+         #controlSlide img#prev{
+            margin-left: 34%;
+        }
+
+#listaPedidos {
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: #ccc;
+}
+
+.cancelar {
+    color: red;
+    font-size: 25px;
+    cursor: pointer;
+    font-family: Arial;
+    padding-top: 2px;
+    z-index: 9999;
+}
+
+
+#pedidosRapidos {
+    float: left;
+    width: 40%;
+}
+    #pedidosRapidos img{
+        float: left;
+        width: 30%;
+/*
+        -webkit-box-shadow: 0px 35px 81px -17px rgba(179,179,179,0.74);
+        -moz-box-shadow: 0px 35px 81px -17px rgba(179,179,179,0.74);
+        box-shadow: 0px 35px 81px -17px rgba(179,179,179,0.74);
+*/
+        cursor: pointer;
+        margin: 1%;
+    }
+
+.sa-custom{
+    width: 218px !important;
+    height: 105px !important;
+}
+
+#pedido1,
+#pedido3{
+    margin-top: 65px !important;
+}
+#pedido4 {
+    margin-left: 33% !important;
+    margin-top: -8% !important;
+}
+
+
+#total{
+    float: right;
+    background: #333;
+    width: 19%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+    #titlePR{
+        margin-top: 125px;
+        margin-left: 2%;
+        width: 98%;
+        text-align: center;
+        color: white;
+        margin-bottom: 15px;
+    }
+    .pr {
+        float: left;
+        width: 100%;
+        text-align: center;
+        color: #ccc;
+        font: 13px "UBUNTU";
+        margin-bottom: 5px;
+    }
+    #linhaTotal{
+        float: left;
+        text-align: right;
+        width: 94%;
+        margin-left: 2%;
+        bottom: 2%;
+        position: absolute;
+        color: white;
+        margin-right: 2%;
+    }
+    #btPagar {
+        float: right;
+        background: #00B2B2;
+        color: white;
+        text-align: center;
+        border: 0;
+        padding: 8%;
+        bottom: 5%;
+        cursor: pointer;
+        height: 50px;
+        line-height: 0;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .btDesativado {
+        opacity: 0.3;
+    }
+
+#telaPagamento {
+    float: left;
+    width: 100%;
+    display: none;
+}
+    #telaPagamento h2 {
+        margin-bottom: 20px;
+    }
+
+    #telaPagamento input{
+        margin-top: 0.5%;
+        float: left;
+        width: 98%;
+        height: 40px;
+        padding-left: 1%;
+        border: 1px solid #BBBBBB;
+        font-family: "Open Sans";
+        font-weight: 300;
+        font-size: 14px;
+        color: #222222;
+        margin-bottom: 10px;
+        margin-left: 1%;
+    }
+    
+    #btConfirmaPg {
+        float: right;
+        margin-right: 2%;
+        border: 0;
+        width: 112px;
+        height: 40px;
+        background: #00B2B2;
+        color: white;
+        cursor: pointer;
+        margin-bottom: 60px;
+    }
+
+#info {
+    float: left;
+    width: 100%;
+    display: none;
+}
+    #info p {
+        float: left;
+        width: 96%;
+        margin-left: 2%;
+        margin-bottom: 20px;
+    }
+
+.tituloJanela{
+    float: left;
+    width: 98%;
+    font: 20px "UBUNTU-BOLD";
+    color: #00B2B2;
+    margin-top: 20px;
+    padding-left: 2%;
+    margin-bottom: 20px;
+}
+
+#formContato{
+    float: left;
+    widt: 100%;
+    display: none;
+}
+    
+    #formContato h1 {
+        float: left;
+        width: 98%;
+        font: 20px "UBUNTU-BOLD";
+        color: #00B2B2;
+        margin-top: 20px;
+        padding-left: 2%;
+        margin-bottom: 20px;
+    }
+
+        #formContato input{
+            float: left;
+            width: 96%;
+            height: 40px;
+            padding-left: 1%;
+            border: 1px solid #BBBBBB;
+            font-family: "Open Sans";
+            font-weight: 300;
+            font-size: 14px;
+            color: #222222;
+            margin-bottom: 10px;
+            margin-left: 2%;
+        }
+        #formContato textarea{
+            float: left;
+            width: 96%;
+            height: 120px;
+            padding-left: 1%;
+            padding-top: 2%;
+            border: 1px solid #BBBBBB;
+            font-family: "Open Sans";
+            font-weight: 300;
+            font-size: 14px;
+            color: #222222;
+            margin-bottom: 10px;
+            margin-left: 2%;
+        }
+           #formContato button{
+                float: right;
+                margin-right: 2%;
+                border: 0;
+                width: 112px;
+                height: 40px;
+                background: #00B2B2;
+                color: white;
+                cursor: pointer;
+                margin-bottom: 60px;
+            }
+            #formContato button:hover{
+                color: #333;
+                transition: color .3s;
+                -webkit-transition: color .3s;
+                -moz-transition: color .3s;
+            }
+            #camposObrigatorios{
+                float: left;
+                width: 96%;
+                margin-left: 2%;
+                margin-top: -5%;
+                color: #333;
+            }
+
+ 
+@keyframes animationMenu
+{
+   from
+   {
+        opacity:0;
+        -moz-opacity: 0;
+        filter: alpha(opacity=0);
+        margin-top:-100px;
+   }
+   to
+   {
+        opacity:1;
+        -moz-opacity: 1;
+        filter: alpha(opacity=100);
+        margin-top:15px;
+   }
+}
+
+
+ 
+@-webkit-keyframes animationMenu
+{
+   from
+   {
+        opacity:0;
+        -moz-opacity: 0;
+        filter: alpha(opacity=0);
+        margin-top:-100px;
+   }
+   to
+   {
+        opacity:1;
+        -moz-opacity: 1;
+        filter: alpha(opacity=100);
+        margin-top:15px;
+   }
+}
+
+
+
+@keyframes animationLogo
+{
+   from
+   {
+        opacity:0;
+        -moz-opacity: 0;
+        filter: alpha(opacity=0);
+        margin-top:-100px;
+   }
+   to
+   {
+        opacity:1;
+        -moz-opacity: 1;
+        filter: alpha(opacity=100);
+        margin-top:35px;
+   }
+}
+
+
+ 
+@-webkit-keyframes animationLogo
+{
+   from
+   {
+        opacity:0;
+        -moz-opacity: 0;
+        filter: alpha(opacity=0);
+        margin-top:-100px;
+   }
+   to
+   {
+        opacity:1;
+        -moz-opacity: 1;
+        filter: alpha(opacity=100);
+        margin-top:35px;
+   }
+}
+
+@-webkit-keyframes animationTopo
+{
+   from
+   {
+        opacity:0;
+        -moz-opacity: 0;
+        filter: alpha(opacity=0);
+        margin-top:-4%;
+   }
+   to
+   {
+        opacity:1;
+        -moz-opacity: 1;
+        filter: alpha(opacity=100);
+        margin-top:2.4%;
+   }
+}
+
+@keyframes animationTopo
+{
+   from
+   {
+        opacity:0;
+        -moz-opacity: 0;
+        filter: alpha(opacity=0);
+        margin-top:-4%;
+   }
+   to
+   {
+        opacity:1;
+        -moz-opacity: 1;
+        filter: alpha(opacity=100);
+        margin-top:2.4%;
+   }
+}

@@ -1,0 +1,224 @@
+@charset "utf-8";
+/* Folha de Estilo referente ao Site da CSBRASIL */
+
+@media only screen and (max-width: 1980px){
+    .centro-planos{
+        max-width: 1680px;
+    }
+}
+
+@media only screen and (max-width: 1680px){
+    .centro-planos{
+        max-width: 1280px;
+    }
+}
+@media only screen and (min-width: 1680px){
+    #menu-sanfona ul li h2{
+        margin-top: 1%;
+    }
+    
+    
+}
+
+
+@media only screen and (max-width: 1336px){
+    .centro-planos{
+        max-width: 1280px;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .centro-planos{
+        max-width: 980px;
+        
+    }
+    #slide{
+        margin-top: 141px;
+    }
+    header #menu {
+        min-width: 500px;
+    }
+        header #menu li{
+            padding-left: 2%;
+            padding-right: 2%;
+            font: 18px "UBUNTU-REGULAR";
+        }
+        
+    #planos #boxPlanos a.plano{
+        width: 24%;
+        margin: 0.5%;
+    }
+    #menu-sanfona ul li h2
+    {
+        margin-top: -13px;
+        padding-bottom: 2%;
+    }
+    
+    #menu-sanfona ul li .arrow-menu {
+        margin-top: 13px;
+    }
+    .centro{
+        max-width: 80%;
+    }
+    footer{
+        height: 700px;
+    }
+    footer .boxFooter {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+        footer .boxFooter img {
+            display: block;
+            margin: 0 auto;
+            float: none !important;
+        }
+        footer .boxFooter #copy{
+            width: 240px;
+            float: none;
+            margin: 0 auto;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    footer #news-letter{
+        margin: 0 auto;
+        display: block;
+        float: none;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+        footer #news-letter h3{
+            text-align: center;
+        }
+    
+    #box-facebook{
+        float: none !important;
+        margin: 0 auto;
+        display: block;
+        width: 80% !important;
+    }
+
+}
+@media only screen and (max-width: 800px){
+    
+    #slide{
+        margin-top: 65px;
+    }
+    header{
+        height: 65px !important;
+    }
+        header #menu {
+                display: none;
+                margin-top: 67px !important;
+                background: #1495BA;
+                min-width: 150px;
+                position: fixed;
+                right: 0;
+            }
+                header #menu li {
+                    background: #1495BA;
+                    color: white;
+                    margin-right: 0;
+                    width: 100%;
+                    font: 17px "UBUNTU-REGULAR";
+                    padding-top: 12px !important;
+                }
+                header #menu li:hover {
+                    color: white;
+                }
+        header #btMenu{
+            display: block;
+        }
+        header #logo {
+            width: 3.75%;
+            height: 55px;
+            margin-top: 8px;
+        }
+
+        header #btMenu{
+            float: right;
+            width: 37px;
+            height: 32px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            background: url("../imgs/navMobile.png") no-repeat;
+            margin-top: 15px;
+            margin-right: 5px;
+        }
+        
+    #painel_login{
+        margin-top: 65px;
+    }
+    
+    #painel_login {
+        width: 230px;
+        margin-top: 10% !important;
+    }
+        #painel_login form input {
+            margin-left: 10.5%;
+        }
+    
+    #planos #boxPlanos a.plano{
+        width: 48%;
+        margin: 1%;
+    }
+    
+    
+    #menu-sanfona ul .rowDuvidas{
+        width: 96%;
+        margin-left: 2%;
+    }
+        #menu-sanfona ul li h2 {
+            margin-top: 7px !important
+        }
+    #planos #boxPlanos a.plano {
+        min-height: 540px;
+    }   
+    
+    
+}
+
+
+@media only screen and (max-width: 540px){
+    #planos #boxPlanos a.plano{
+        /*min-height: 390px;*/
+    }
+}
+
+ 
+
+@media only screen and (max-width: 440px){
+    
+    #formas_pag{
+        width: 100%;
+    }
+        #formas_pag img{
+            width: 100%;
+        }
+    #planos #boxPlanos a.plano {
+        /*height: auto;*/
+        width: 100%;
+    }  
+    
+
+}
+
+
+@media only screen and (max-width: 440px){
+    
+    #planos #boxPlanos a.plano{
+        width: 98%;
+        margin: 1%;
+    }
+    
+
+}
+
+
+
+
+

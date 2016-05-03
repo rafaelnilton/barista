@@ -1,0 +1,160 @@
+<html lang="pt-br" ng-app="baristaApp">
+<head>
+<title>BarISTa</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   
+    <link rel="stylesheet" href="css/sweetalert.css">
+    <link rel="stylesheet" type="text/css" media="all" href="js/source/jquery.fancybox.css?v=2.1.5" />
+    <link rel="stylesheet" href="css/reset-min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+   
+
+</head>
+<body ng-controller="BaristaControllers">
+
+    <header>
+        
+        <div id="logo"></div>
+        
+        <nav>
+           
+           <ul>
+               <li>
+                   <a href="#"><img src="images/menu0.png" alt=""></a>
+               </li>
+               
+               <li>
+                   <img src="images/menu1.png" alt="">
+               </li>
+               <li>
+                   <img src="images/menu2.png" alt="">
+               </li>
+               <li>
+                   <img data-ng-click="chamarTaxi()" id="menuTaxi" src="images/menu3.png" alt="">
+               </li>
+               <li>
+                   <img src="images/menu6.png" alt="">
+               </li>
+               <li>
+                   <a href="#info" class="fancybox"><img src="images/menu4.png" alt=""></a>
+               </li>
+               <li>
+                   <a href="#formContato" class="fancybox"><img src="images/menu5.png" alt=""></a>
+               </li>
+           </ul>
+            
+        </nav>
+        
+    </header>
+    
+    <div id="promocoes">
+       
+        <h1>NOVIDADES</h1>
+        
+        
+        <div id="slideLeft">
+        
+            <div id="slide" class="cycle-slideshow"
+                 data-cycle-fx="fade"
+                 data-cycle-timeout="3000"
+                data-cycle-next="#next"
+                data-cycle-prev="#prev"
+            >
+                <img src="images/sanduiches.png"/>
+                <img src="images/san.png"/>
+
+            </div><!--/cycle-slideshow-->
+
+            <div id="controlSlide">
+                <img id="prev" src="images/prev.png" alt="">
+                <img id="next" src="images/next.png" alt="">
+            </div><!--controlSlide-->
+            
+        </div><!--/slideLeft-->
+
+        
+        <div id="pedidosRapidos">
+           <h2>PEDIDOS RÁPIDOS</h2>
+            <img id="pedido1" ng-click="pedidoRealizado('BigInsta', '3.00')" src="images/pedir1.png" alt=""/>
+            <img id="pedido2" ng-click="pedidoRealizado('DrinkInsta', '2.00')" src="images/pedir2.png" alt=""/>
+            <img id="pedido3" ng-click="pedidoRealizado('Sanduiche Light', '2.50')" src="images/pedir3.png" alt=""/>
+            <img id="pedido4" ng-click="pedidoRealizado('Petiscos', '3.80')" src="images/pedir4.png" alt=""/>
+        </div>
+        
+    </div><!--/promocoes-->
+    
+    
+    <div id="total">
+        <h2 id="titlePR">Pedidos realizados</h2>
+        
+        <div id="listaPedidos">
+           <ul >
+               <li ng-repeat="pedido in pedidos">
+                  <p>{{pedido.produto}} ... {{pedido.valor}}
+                      <span class='cancelar' ng-click="cancelarPedido($index)">X</span>
+                  </p>
+              </li>
+           </ul>
+            
+            
+        </div>
+        
+        <p id="linhaTotal">
+            <span id="tituloTotal">Total: </span> <span id="valorTotal">{{total | currency}}</span><br><br>
+            <button id="btPagar" ng-click="pagar()">Pagar</button>
+        </p>
+        
+    </div><!--/total-->
+    
+    <a href="#telaPagamento" id="chamarPagamento" style="display:none" class="fancybox"></a>
+    
+
+    <form id="formContato">
+       
+        <h1>Fale Conosco</h1>
+
+        <input type="text" name="nome" placeholder="Nome (*)">
+
+        <input class="right-f" type="email" name="email" placeholder="E-mail (*)">
+
+        <input type="text" name="telefone" placeholder="Telefone (*)" required="required" maxlength="12" onkeydown="javascript:return numeros(event);" onkeypress="formatar(this, '## ####-####');">
+
+        <input class="right-f" type="text" name="assunto" placeholder="Assunto (*)">
+
+        <textarea name="mensagem" placeholder="Mensagem (*)"></textarea>
+
+        <button type="submit" ng-click="mensagemEnviada()">enviar</button>
+        
+        <p id="camposObrigatorios">(*) Campos obrigatórios!</p>
+
+    </form>
+    
+    
+    <div id="telaPagamento">
+       <h2>Insira os dados do cartão de crédito!</h2>
+        <input id="numeroCartao" type="text" required="required" onkeydown="javascript:return numeros(event); " placeholder="Digite o número do cartão">
+        <input id="tv2" type="text" required="required"  onkeydown="javascript:return numeros(event); "  placeholder="Digite o código de segurança">
+        <button id="btConfirmaPg" onclick="pagamentoFinal()">Confirmar</button>
+    </div>
+    
+    <div id="info">
+        <h1 class="tituloJanela">Info</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis natus ullam neque, laudantium harum veritatis doloremque deleniti sapiente modi fugiat labore dignissimos perferendis consequatur dolores molestias vero fuga, deserunt blanditiis.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam rerum quo quia quibusdam vitae modi ea. Qui quod eum, ad numquam aliquam accusamus deleniti maiores quis. Enim numquam cumque praesentium?</p>
+    </div>
+    
+   
+    
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.cycle2.min.js"></script>
+    <script src="js/source/jquery.fancybox.js?v=2.1.5"></script>
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/jsapi.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/controller.js"></script>
+
+    
+</body>
+</html>

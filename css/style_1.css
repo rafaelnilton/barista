@@ -1,0 +1,892 @@
+@charset "utf-8";
+/* Folha de Estilo referente ao Site da Realiza Doações */
+
+
+body
+{
+    margin: 0 auto;
+    font-size: 100%;
+    font-family:Myriad Pro;
+}
+
+body a
+{
+    text-decoration: none;
+}
+
+.centro
+{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 980px;
+}
+
+/*-------------------------- FONTS ------------------------------------*/
+
+@font-face
+{
+    font-family:"LATO-REGULAR";
+    src:url("fonts/LATO-REGULAR.ttf") format("truetype"),
+    url("fonts/LATO-REGULAR.eot") format("truetype"),
+    url("fonts/LATO-REGULAR.otf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face
+{
+    font-family:"LATO-BOLD";
+    src:url("fonts/LATO-BOLD.ttf") format("truetype"),
+    url("fonts/LATO-BOLD.eot") format("truetype"),
+    url("fonts/LATO-BOLD.otf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face
+{
+    font-family:"LATO-LIGHT";
+    src:url("fonts/LATO-LIGHT.ttf") format("truetype"),
+    url("fonts/LATO-LIGHT.eot") format("truetype"),
+    url("fonts/LATO-LIGHT.otf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face
+{
+    font-family:"LATO-BLACK";
+    src:url("fonts/LATO-BLACK.ttf") format("truetype"),
+    url("fonts/LATO-BLACK.eot") format("truetype"),
+    url("fonts/LATO-BLACK.otf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+::-webkit-input-placeholder {
+   color: #333;
+}
+
+:-moz-placeholder {
+   color: #333;
+}
+
+::-moz-placeholder {
+   color: #333;  
+}
+
+:-ms-input-placeholder {  
+   color: #333;  
+}
+/*---------------------------Classes padrões----------------------------*/
+
+h1.ti-pg
+{
+    float: left;
+    width: 100%;
+    font: 45px "LATO-BLACK";
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+h2.sub-ti
+{
+    float: left;
+    width: 100%;
+    font: 18px "LATO-LIGHT";
+    color: white;
+    text-align: center;
+    margin-top: 0px;
+}
+
+/*----------------------------------Topo--------------------------------------*/
+header{
+    float: left;
+    width: 100%;
+    height: 59px;
+    background: #D92C7D;
+    position: fixed;
+    display: block;
+    z-index: 999;
+}
+        header #logo-white{
+            float: left;
+            width: 110px;
+            height: 39px;
+            background: url("../imgs/sprite.png") no-repeat;
+            background-position: 0 0;
+            margin-top: 10px;
+            margin-right: 64px;
+        }
+        header #menu{
+            float: left;
+            width: 590px;
+            height: 59px;
+            z-index: 1;
+            display: block;
+        }
+                header #menu ul{
+                    float: left;
+                    width: 100%;
+                    height: 59px;
+                }
+                    header #menu ul li{
+                        float: left;
+                        width: auto;
+                        height: 39px;
+                        color: white;
+                        text-align: center;
+                        margin-left: 4px;
+                        margin-right: 3px;
+                        text-transform: uppercase;
+                        font-family: "LATO-REGULAR";
+                        font-size: 12px;
+                        padding-top: 20px;
+                        padding-left: 3px;
+                        padding-right: 3px;
+                        background: #D92C7D;
+						cursor: pointer;                     
+                    }
+                            header #menu ul li a{
+                                float: left;
+                                width: 100%;
+                                height: 100%;
+                                text-decoration: none;
+                                color: white;
+                                
+                            }
+                    header #menu ul li:hover{
+                        background: #8C1A50;
+                        transition: background 0.4s;
+                        -webkit-transition: background 0.4s;
+                        -moz-transition: background 0.4s;
+                    }
+        header #bt-realizar{
+            float: left;
+            width: 124px;
+            height: 49px;
+            border: 0;
+            background: #00B082;
+            color: white;
+            font: 15px "LATO-BOLD";
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            z-index: 100;
+            display: block;
+            padding-top: 10px;
+            margin-left: 37px;
+        }
+        header #fazer-login
+        {
+            float: left;
+            width: 55px;
+            height: 59px;
+            background: #BE2168;
+            color: white;
+            font: 11px "LATO-LIGHT";
+            background: url("../imgs/sprite.png") no-repeat;
+            background-position: -258px 0px;
+            text-align: center;
+            text-transform: uppercase;
+            line-height: 8;
+        }
+
+/*----------------------------------/Topo-------------------------------------*/
+
+/*-------------------------------- Slideshow ---------------------------------*/
+
+.cycle-slideshow{
+    float: left;
+    width: 100%;
+    height: 595px;
+    overflow: hidden;
+    margin-top: 59px;
+}
+        
+        .cycle-slideshow div{
+            top: 0px;
+            left: 0px;
+            display: block;
+            z-index: 8;
+            opacity: 1;
+            width: 1380px;
+            height: 595px;
+            margin: 0 auto;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+                .cycle-slideshow #slide1{
+                    background: url("../imgs/slide/doacoes.jpg") 50% 0% no-repeat;
+                }
+                        .cycle-slideshow #slide1 #botoes-doacoes{
+                            float: left;
+                            width: 335px;
+                            height: 59px;
+                            margin-top: 340px;
+                            margin-left: 330px;
+                            z-index: 101;
+                        }
+                                .cycle-slideshow #slide1 #botoes-doacoes button#doar-tem{
+                                    float: left;
+                                    width: 153px;
+                                    height: 59px;
+                                    background: #00B082;
+                                    border: 0;
+                                    border-radius: 5px;
+                                    -moz-border-radius: 5px;
+                                    -webkit-border-radius: 5px;
+                                    text-transform: uppercase;
+                                    cursor: pointer;
+                                }
+                                .cycle-slideshow #slide1 #botoes-doacoes button#doar-tem:hover{
+                                    background: #009D76;
+                                    transition: background .6s;
+                                    -webkit-transition: background .6s;
+                                    -moz-transition: background .6s;
+                                }
+                                        .cycle-slideshow #slide1 #botoes-doacoes button#doar-tem .ti-bt{
+                                                color: white;
+                                                font-family: "LATO-BLACK";
+                                                text-align: center;
+                                                font-size: 20px;
+                                                margin-top: -15px;
+                                                line-height: 2;
+                                        }
+                                        .cycle-slideshow #slide1 #botoes-doacoes button#doar-tem .des-bt{
+                                            float: left;
+                                            width: 100%;
+                                            text-align: center;
+                                            color: white;
+                                            line-height: 0;
+                                            margin-top: 0;
+                                        }
+                                .cycle-slideshow #slide1 #botoes-doacoes button#doar-cad{
+                                    float: left;
+                                    width: 153px;
+                                    height: 59px;
+                                    background: #DA2D7D;
+                                    border: 0;
+                                    border-radius: 5px;
+                                    -moz-border-radius: 5px;
+                                    -webkit-border-radius: 5px;
+                                    text-transform: uppercase;
+                                    margin-left: 29px;
+                                    cursor: pointer;
+                                }
+                                .cycle-slideshow #slide1 #botoes-doacoes button#doar-cad:hover{
+                                    background: #C0276E;
+                                    transition: background .6s;
+                                    -webkit-transition: background .6s;
+                                    -moz-transition: background .6s;
+                                }
+                                        .cycle-slideshow #slide1 #botoes-doacoes button#doar-cad .ti-bt{
+                                                color: white;
+                                                font-family: "LATO-BLACK";
+                                                text-align: center;
+                                                font-size: 20px;
+                                                margin-top: -15px;
+                                                line-height: 2;
+                                        }
+                                        .cycle-slideshow #slide1 #botoes-doacoes button#doar-cad .des-bt{
+                                            float: left;
+                                            width: 100%;
+                                            text-align: center;
+                                            color: white;
+                                            line-height: 0;
+                                            margin-top: 0;
+                                        }
+                                        #intro-realize{
+                                            float: left;
+                                            width: 70%;
+                                            text-align: justify;
+                                            font-family: "LATO-REGULAR";
+                                            color: #666;
+                                            font-size: 13px;
+                                            padding-left: 15%;
+                                            padding-right: 15%;
+                                            margin-top: 35px;
+                                        }
+                                                #intro-realize strong{
+                                                    float: left;
+                                                    width: 100%;
+                                                    text-transform: uppercase;
+                                                    text-align: center;
+                                                    margin-top: 5px;
+                                                    font-family: "LATO-BLACK";
+                                                }
+                .cycle-slideshow #slide2{
+                    background: url("../imgs/slide/img2.jpg") 50% 0% no-repeat;
+                }
+                        .cycle-slideshow #slide2 #intro-video{
+                             float: left;
+                             width: 300px;
+                             height:  150px;
+                             background: url("../imgs/sprite.png") no-repeat;
+                             background-position: -320px 12px;
+                             margin-top: 277px;
+                             margin-left: 60px;
+                        }
+                                .cycle-slideshow #slide2 #intro-video h3{
+                                    float: left;
+                                    font: 25px "LATO-BLACK";
+                                    color: white;
+                                    line-height: 1;
+                                    text-align: center;
+                                }
+                        .cycle-slideshow #slide2 #video{
+                            float: right;
+                            width: 423px;
+                            height: 279px;
+                            border: 4px solid #DA2D7D;
+                            margin-top: 193px;
+                            margin-right: 100px;
+                        }
+                                .cycle-slideshow #slide2 #video iframe{
+                                    border: 4px solid black;
+                                }
+/*                .cycle-slideshow #slide3{
+                    background: url("../imgs/slide/img3.jpg") 50% 0% no-repeat;
+                }*/
+        .arrow{
+            position: absolute;
+            width: 33px;
+            height: 101px;
+            z-index: 102;
+            margin-top: 312px;
+            display: block;
+        }
+        #prev-slide{
+            float: left;
+            background: url("../imgs/sprite.png") no-repeat;
+            background-position: -1px -41px;
+            margin-left: 1%;
+        }
+        #next-slide{
+            float: right;
+            background: url("../imgs/sprite.png") no-repeat;
+            background-position: -42px -41px;
+            margin-left: 96.5%;
+        }
+
+/*-------------------------------- /Slideshow --------------------------------*/
+
+
+/*-------------------------------- QUEM SOMOS --------------------------------*/
+
+#quem-somos{
+    float: left;
+    width: 100%;
+    height: 605px;
+    background: #D92C7D;
+}
+        #quem-somos .centro-qs{
+            height: 605px;
+            background: url("../imgs/bg-quem-somos.jpg") no-repeat;
+        }
+                #quem-somos .centro-qs #txt-qs
+                {
+                    float: left;
+                    width: 800px;
+                    font: 14px "LATO-REGULAR";
+                    color: white;
+                    text-align: justify;
+                    margin-left: 90px;
+                    margin-top: 50px;
+                }
+                #quem-somos .centro-qs figure#img-qs
+                {
+                    float: left;
+                    width: 690px;
+                    height: 201px;
+                    margin-left: 145px;
+                    margin-top: 50px;
+                }
+
+/*-------------------------------- /QUEM SOMOS -------------------------------*/
+
+/*-------------------------------- COMO FUNCIONA -----------------------------*/
+#como-funciona{
+    float: left;
+    width: 100%;
+    height: 605px;
+    background: #F3F3F3;
+}
+        #como-funciona .ti-cf{
+            color: #666666;
+        }
+        #como-funciona .sub-cf{
+            color: #666666;
+        }
+        #como-funciona figure#img-cf{
+            float: left;
+            width: 690px;
+            height: 201px;
+            margin-left: 145px;
+            margin-top: 50px;
+        }
+        #como-funciona #txt-cf{
+            float: left;
+            width: 800px;
+            font: 14px "LATO-REGULAR";
+            color: #666666;
+            text-align: justify;
+            margin-left: 90px;
+            margin-top: 50px;
+        }
+/*-------------------------------- /COMO FUNCIONA ----------------------------*/
+
+/*-------------------------------- INSTITUICOES ------------------------------*/
+
+#instituicoes{
+    float: left;
+    width: 100%;
+    height: 605px;
+    background: white;
+}
+        #instituicoes .ti-in,
+        #instituicoes .sub-in{
+            color: #666666;
+        }
+        #instituicoes #map_canvas{
+            float: left;
+            width: 100%;
+            height: 492px;
+            background: #009D76;
+            margin-top: 10px;
+        }
+/*-------------------------------- /INSTITUICOES -----------------------------*/
+
+/*--------------------------- CADASTRAR INSTITUICOES -------------------------*/
+
+#cadastrar-instituicao{
+    float: left;
+    width: 100%;
+    height: 605px;
+    background: #F3F3F3;
+}
+        #cadastrar-instituicao .centro h1.ti-pg,
+        #cadastrar-instituicao .centro h2.sub-ti{
+            color: #666666;
+			
+        }
+        #cadastrar-instituicao form#cad-insti{
+			float: left;
+			width: 790px;
+			margin-left: 100px;
+			margin-top: 20px;
+		}
+				#cadastrar-instituicao form#cad-insti input{
+					float: left;
+					width: 373px;
+					height: 40px;
+					border: 0;
+					background: white;
+					margin-right: 33px;
+					margin-top: 14px;
+					border-radius: 6px;
+					-moz-border-radius: 6px;
+					-webkit-border-radius: 6px;
+					padding-left: 5px;
+					font: 14px "LATO-LIGHT";
+				}
+				#cadastrar-instituicao form#cad-insti .right-f{
+					margin-right: 0;
+				}
+				#cadastrar-instituicao form#cad-insti textarea{
+					float: left;
+					width: 373px;
+					height: 80px;
+					border: 0;
+					background: white;
+					margin-right: 33px;
+					margin-top: 14px;
+					border-radius: 6px;
+					-moz-border-radius: 6px;
+					-webkit-border-radius: 6px;
+					padding-left: 5px;
+					padding-top: 5px;
+					font: 14px "LATO-LIGHT";
+				}
+				#cadastrar-instituicao form#cad-insti button{
+					float: left;
+					width: 185px;
+					height: 67px;
+					border: 0;
+					background: #00B082;
+					color: white;
+					font: 14px "LATO-BOLD";
+					text-transform:uppercase;
+					text-align: center;
+					font-size: 35px;
+					border-radius: 6px;
+					-moz-border-radius: 6px;
+					-webkit-border-radius: 6px;
+					line-height: 1;
+					margin-left: 307px;
+					margin-top: 27px;
+					cursor: pointer;
+				}
+						#cadastrar-instituicao form#cad-insti button small{
+							float: left;
+							width: 100%;
+							font-size: 15px;
+							text-align: center;
+							font: 14px "LATO-LIGHT";
+						}
+				#cadastrar-instituicao form#cad-insti button:hover{
+					background: #DC3985;
+					transition: background .3s;
+					-webkit-transition: background .3s;
+					-moz-transition: background .3s;
+					-o-transition: background .3s;
+				}
+				
+/*-------------------------- /CADASTRAR INSTITUICOES -------------------------*/
+
+/*-------------------------------- FALE CONOSCO ------------------------------*/
+
+#fale-conosco{
+    float: left;
+    width: 100%;
+    height: 605px;
+    background: #BE2168;
+}
+        #fale-conosco .centro h1.ti-pg,
+        #fale-conosco .centro h2.sub-ti{
+            color: white;
+			
+        }
+		
+		#fale-conosco form{
+			float: left;
+			width: 790px;
+			margin-left: 100px;
+			margin-top: 20px;
+		}
+				#fale-conosco form input{
+					float: left;
+					width: 373px;
+					height: 40px;
+					border: 0;
+					background: white;
+					margin-right: 33px;
+					margin-top: 14px;
+					border-radius: 6px;
+					-moz-border-radius: 6px;
+					-webkit-border-radius: 6px;
+					padding-left: 5px;
+					font: 14px "LATO-LIGHT";
+				}
+				#fale-conosco form .right-f{
+					margin-right: 0;
+				}
+				#fale-conosco form textarea{
+					float: left;
+					width: 99.4%;
+					height: 112px;
+					border: 0;
+					background: white;
+					margin-right: 33px;
+					margin-top: 14px;
+					border-radius: 6px;
+					-moz-border-radius: 6px;
+					-webkit-border-radius: 6px;
+					padding-left: 5px;
+					padding-top: 10px;
+					font: 14px "LATO-LIGHT";
+				}
+				#fale-conosco form button{
+					float: left;
+					width: 185px;
+					height: 67px;
+					border: 0;
+					background: #DC3985;
+					color: white;
+					font: 14px "LATO-BOLD";
+					text-transform:uppercase;
+					text-align: center;
+					font-size: 35px;
+					border-radius: 6px;
+					-moz-border-radius: 6px;
+					-webkit-border-radius: 6px;
+					line-height: 1;
+					margin-left: 307px;
+					margin-top: 35px;
+					cursor: pointer;
+				}
+				#fale-conosco form button:hover{
+					color: #DC3985;
+					background: white;
+					transition: background .3s;
+					-webkit-transition: background .3s;
+					-moz-transition: background .3s;
+					-o-transition: background .3s;
+				}
+				#fale-conosco form #others-contact{
+					float: left;
+					width: 100%;
+					text-align: center;
+					color: white;
+					font: 15px "LATO-REGULAR";
+					margin-top: 25px;
+				}
+		
+/*------------------------------- /FALE CONOSCO ------------------------------*/
+
+
+/*------------------------------ DESTAQUE MÍDIA ------------------------------*/
+
+#destaque-midia{
+    float: left;
+    width: 100%;
+    height: 400px;
+    background: white;
+}
+        #destaque-midia .centro h1.ti-pg,
+        #destaque-midia .centro h2.sub-ti{
+            color: #666666;
+			
+        }
+		#destaque-midia .centro #logos-midia
+		{
+			float: left;
+			width: 100%;
+			margin-top: 30px;
+		}
+				#destaque-midia .centro #logos-midia figure
+				{
+					float: left;
+					width: 100%;
+					margin: 0;
+				}
+						#destaque-midia .centro #logos-midia figure img
+						{
+							float: left;
+							width: 170px;
+							height: 100px;
+							border: 1px solid #E5E5E5;
+							margin-left: 30px;
+							margin-bottom: 20px;
+						}
+						#destaque-midia .centro #logos-midia figure img.img-left
+						{
+							margin-left: 0}
+
+/*----------------------------- /DESTAQUE MÍDIA ------------------------------*/
+
+
+
+/*------------------------------ PATROCINADORES ------------------------------*/
+
+#patrocinadores{
+	float: left;
+	width: 100%;
+	height: 150px;
+	background: #F3F3F3
+}
+		#patrocinadores figure{
+			float: left;
+			width: 980px;
+			height: 100px;
+			margin: 0;
+			margin-top: 18px;
+		}
+				#patrocinadores figure .banner-p{
+					float: left;
+					width: 300px;
+					height: 100px;
+					margin-right: 37px;
+					border: 1px solid #ccc;
+				}
+				#patrocinadores figure .banner-u{
+					margin-right: 0;
+				}
+		#patrocinadores .link-anuncie{
+			float: right;
+			font: 12px "LATO-REGULAR";
+			color: #333;
+			margin-top: 7px;
+		}
+
+/*------------------------------ /PATROCINADORES -----------------------------*/
+
+/*--------------------------------- BOXS RODAPE ------------------------------*/
+
+#boxs{
+	float: left;
+	width: 100%;
+	background: white;
+}
+		#boxs #news-letter{
+			float: left;
+			width: 280px;
+			height: 182px;
+			margin-top: 20px;
+			border-right: 1px solid #ccc;
+		}
+				#boxs #news-letter h2{
+					float: left;
+					font: 13px "LATO-BLACK";
+					color: #666;
+					margin-bottom: 15px;
+					text-transform: uppercase;
+				}
+				#boxs #news-letter form{
+					float: left;
+					width: 100%;
+					height: 182px;
+				}
+						#boxs #news-letter form input{
+							float: left;
+							width: 225px;
+							height: 43px;
+							background: white;
+							border: 1px solid #CCC;
+							border-radius: 4px;
+							-moz-border-radius: 4px;
+							-webkit-border-radius: 4px;
+							padding-left: 3px;
+							margin-bottom: 10px;
+							font: 13px "LATO-LIGHT";
+						}
+						#boxs #news-letter form button{
+							float: right;
+							width: 80px;
+							height: 32px;
+							color: white;
+							text-transform:uppercase;
+							font: 12px "LATO-REGULAR";
+							text-align: center;
+							margin-right: 50px;
+							background: #00B082;
+							border: 0;
+							border-radius: 4px;
+							-moz-border-radius: 4px;
+							-webkit-border-radius: 4px;
+							cursor: pointer;		
+						}
+						#boxs #news-letter form button:hover{
+							background: #DC3985;
+							transition: background .3s;
+							-webkit-transition: background .3s;
+							-moz-transition: background .3s;
+							-o-transition: background .3s;		
+						}
+		#boxs #box-facebook{
+			float: left;
+			width: 269px;
+			height: 182px;
+			background: white;
+			margin-top: 20px;
+			margin-left: 35px;
+			border-right: 1px solid #ccc;
+		}
+		#boxs #box-parceiros{
+			float: left;
+			width: 356px;
+			height: 182px;
+			background: white;
+			margin-top: 20px;
+			margin-left: 38px;
+		}
+				#boxs #box-parceiros h2{
+					float: left;
+					font: 13px "LATO-BLACK";
+					color: #666;
+					margin-bottom: 15px;
+					text-transform: uppercase;
+				}
+				#boxs #box-parceiros figure{
+					float: left;
+					margin: 0;
+				}
+						#boxs #box-parceiros figure img{
+							float: left;
+							margin-top: 0;
+							margin-right: 5px;
+						}
+
+/*-------------------------------- /BOXS RODAPE ------------------------------*/
+
+/*-------------------------------- FORMAS DE PAG -----------------------------*/
+
+#formas-pag{
+	float: left;
+	width: 100%;
+	height: 77px;
+	background: url('../imgs/formas-pagamento.jpg') no-repeat;
+	background-position: top center;
+	margin-top: 30px;
+}
+
+/*-------------------------------- /FORMAS DE PAG -----------------------------*/
+
+/*---------------------------------   COPYRIGHT -------------------------------*/
+
+#copyright{
+	float: left;
+	width: 100%;
+	height: 60px;
+	background: #F3F3F3;
+	margin-top: 20px;
+}
+		#copyright small#copy{
+			float: left;
+			width: 210px;
+			color: #666;
+			font: 13px "LATO-REGULAR";
+			margin-top: 10px;
+		}
+		#copyright #redes-sociais{
+			float: right;
+			width: 85px;
+			height: 27px;
+			margin-top: 16px;				
+		}
+				#copyright #redes-sociais #rs-twitter{
+					float: left;
+					width: 33px;
+					height: 27px;
+					background: url("../imgs/sprite.png") no-repeat;
+					background-position: -171px -2px;
+				}
+				#copyright #redes-sociais #rs-twitter:hover{
+					background-position: -171px -33px;
+					transition: background .3s;
+					-webkit-transition: background .3s;
+					-moz-transition: background .3s;
+					-o-transition: background .3s;
+				}
+				#copyright #redes-sociais #rs-facebook{
+					float: left;
+					width: 13px;
+					height: 26px;
+					background: url("../imgs/sprite.png") no-repeat;
+					background-position: -212px -3px;
+					margin-left: 8px;
+				}
+				#copyright #redes-sociais #rs-facebook:hover{
+					background-position: -212px -33px;
+					transition: background .3s;
+					-webkit-transition: background .3s;
+					-moz-transition: background .3s;
+					-o-transition: background .3s;
+				}
+				#copyright #redes-sociais #rs-youtube{
+					float: left;
+					width: 22px;
+					height: 26px;
+					background: url("../imgs/sprite.png") no-repeat;
+					background-position: -234px -3px;
+					margin-left: 8px;
+				}
+				#copyright #redes-sociais #rs-youtube:hover{
+					background-position: -234px -33px;
+					transition: background .3s;
+					-webkit-transition: background .3s;
+					-moz-transition: background .3s;
+					-o-transition: background .3s;
+				}
+
+/*---------------------------------   /COPYRIGHT -------------------------------*/
