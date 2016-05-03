@@ -18,8 +18,6 @@
 	function BaristaControllers($rootScope,$scope) {
         
       
-
-        
         
        $('.fancybox').fancybox();
     
@@ -29,7 +27,7 @@
         
        $scope.novoPedido = [];
         
-        function numeros(event){
+        $scope.numeros = function numeros(event){
            var tecla = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
            if ((tecla >= 48 && tecla <= 57) || (tecla >= 96 && tecla <= 105) || tecla == 8 ||  tecla == 9){
                return  true;
@@ -39,11 +37,7 @@
         }
         
         
-       function pagamento() {
-
-            alert("Efetuado!");
-        }
-		
+      
        $scope.pedidoRealizado = function pedidoRealizado(produto, valor){
              swal({
                 title: "Deseja confirmar o pedido?",
