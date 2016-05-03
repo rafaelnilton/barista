@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
    
     <link rel="stylesheet" href="css/sweetalert.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" media="all" href="js/source/jquery.fancybox.css?v=2.1.5" />
     <link rel="stylesheet" href="css/reset-min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -110,25 +111,40 @@
     <a href="#telaPagamento" id="chamarPagamento" style="display:none" class="fancybox"></a>
     
 
-    <form id="formContato">
+    <div id="formContato">
        
-        <h1>Fale Conosco</h1>
+                
+        <h1>Fale conosco</h1>
 
-        <input type="text" name="nome" placeholder="Nome (*)">
+        <!-- FORM -->  
+        <form name="userForm" ng-submit="submitForm()" novalidate>
 
-        <input class="right-f" type="email" name="email" placeholder="E-mail (*)">
+            <!-- NOME -->
+            <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+              <input type="text" name="name" class="form-control" ng-model="user.name" required placeholder="Nome" ng-minlength="1">
+              <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Seu nome é obrigatório</p>
+            </div>
 
-        <input type="text" name="telefone" placeholder="Telefone (*)" required="required" maxlength="12" onkeydown="javascript:return numeros(event);" onkeypress="formatar(this, '## ####-####');">
+            <!-- EMAIL -->
+            <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+              <input type="email" name="email" class="form-control" ng-model="user.email" placeholder="Email">
+              <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Informe um e-mail válido.</p>
+            </div>
 
-        <input class="right-f" type="text" name="assunto" placeholder="Assunto (*)">
+            <!-- MENSAGEM -->
+            <div class="form-group" ng-class="{ 'has-error' : userForm.mensagem.$invalid && !userForm.mensagem.$pristine }">
+                <textarea id="textareaForm" type="text" name="mensagem" class="form-control" ng-model="user.mensagem" ng-minlength="3"  placeholder="Mensagem"></textarea>
+              <p ng-show="userForm.mensagem.$error.minlength" class="help-block">Escreva uma mensagem válida.</p>
+            </div>
 
-        <textarea name="mensagem" placeholder="Mensagem (*)"></textarea>
+            <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">Enviar</button>
+           
+        </form>
+        <p><i>Todos os campos são obrigatórios</i></p>
 
-        <button type="submit" ng-click="mensagemEnviada()">enviar</button>
-        
-        <p id="camposObrigatorios">(*) Campos obrigatórios!</p>
+              
 
-    </form>
+    </div>
     
     
     <div id="telaPagamento">

@@ -106,9 +106,14 @@
 
         }
 
-        $scope.mensagemEnviada = function mensagemEnviada(){
-           swal("Mensagem enviada com sucesso!", "", "success");
-        }
+        $scope.submitForm = function() {
+
+			// verifica se o formulário é válido
+			if ($scope.userForm.$valid) {
+				swal("Mensagem enviada com sucesso!", "", "success");
+			}
+
+		};
 
         $scope.taxiChamado = false;
         $scope.taxi = function taxi(){
@@ -179,11 +184,18 @@
                 closeOnCancel: false
             }, function(isConfirm) {
                 if (isConfirm) {
-                    swal({   title: "Conta fechada!",   text: "Preencha os campos com os dados do cartão",   timer: 3000,   showConfirmButton: false });
-                    $('#chamarPagamento').trigger('click');
-                    $("#btPagar").addClass('btDesativado');
-                    $("#btPagar").attr('onclick', '');
-                    $scope.$apply();
+                    
+                     swal({   title: "Conta fechada!",   text: "Preencha os campos com os dados do cartão",   timer: 1000,   showConfirmButton: false });
+                    setTimeout(function(){
+                        $('#chamarPagamento').trigger('click');
+                        $("#btPagar").addClass('btDesativado');
+                        $("#btPagar").attr('onclick', '');
+                        $scope.$apply();
+                    
+                    
+                    }, 1200);
+                    
+                    
                 } else {
                     swal("Cancelado!", "Operação cancelada!", "error");
                 }
